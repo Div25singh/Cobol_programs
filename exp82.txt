@@ -1,0 +1,19 @@
+ IDENTIFICATION DIVISION.                                      
+ PROGRAM-ID. UNSTR.                                            
+ DATA DIVISION.                                                
+  WORKING-STORAGE SECTION.                                     
+  77 NAME PIC X(20) VALUE 'DIVYANSHU SINGH'.                   
+  77 NAME1 PIC X(20) VALUE 'D.SINGH'                          
+  77 FNAME PIC X(10).                                          
+  77 LNAME PIC X(10).                                          
+  01 WS-TABLE.                                                 
+    05 WS-A PIC X(20) OCCURS 15 TIMES.                         
+ PROCEDURE DIVISION.                                           
+      UNSTRING NAME DELIMITED BY ALL SPACES INTO FNAME , LNAME 
+      END-UNSTRING.                                            
+      DISPLAY FNAME.                                           
+      DISPLAY LNAME.                                           
+      DISPLAY "H."LNAME.                                       
+      MOVE FNAME TO WS-TABLE.                                  
+      DISPLAY WS-A(1) "." WS-A(10)".".                         
+      STOP RUN.                                                

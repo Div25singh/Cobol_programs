@@ -1,0 +1,70 @@
+                                    
+ IDENTIFICATION DIVISION.           
+ PROGRAM-ID. EXP46.                 
+ DATA DIVISION.                     
+ WORKING-STORAGE SECTION.           
+   01 A PIC 9(2).                   
+   01 N PIC 9(3).                   
+   01 F PIC 9(5) VALUE 0.           
+   01 S PIC 9(5) VALUE 1.           
+   01 T PIC 9(5).                   
+   01 K PIC 9(5).                   
+   77 NN PIC 9(2).                  
+   77 FF PIC 9(8) VALUE 1.          
+   77 II PIC 9(2).                  
+   77 PP PIC Z(8).                  
+   01 POWER PIC 9(7) VALUE 1.       
+   77 W PIC 9(5).                   
+   77 AAA PIC 9(2).                 
+   77 NNN PIC 9(2).                 
+   01 Q PIC 9(5).                   
+  PROCEDURE DIVISION.               
+   MAIN-PARA.                       
+       ACCEPT A.                    
+       IF A = 1 THEN                
+            PERFORM FIB-PARA.       
+       IF A = 2 THEN                
+            PERFORM FACT-PARA.      
+       IF A = 3 THEN                
+            PERFORM POWER-PARA.     
+       IF A = 4 THEN                
+            PERFORM LUCKY-PARA.     
+       FIB-PARA.                    
+           DISPLAY "ENTER N VALUE". 
+	 ACCEPT N.                             
+	 DISPLAY "THE FIBONOCCI SERIES IS ".   
+                 DISPLAY F.                            
+                 DISPLAY S.                            
+                 COMPUTE K = N - 2 .                   
+                 PERFORM X-PARA K TIMES                
+                 STOP RUN.      
+         X-PARA.                                              
+         COMPUTE T = F + S .                                  
+         COMPUTE F = S.                                       
+         COMPUTE S = T.                                       
+         DISPLAY T.                                           
+     FACT-PARA.                                               
+         DISPLAY "ENTER ANY NUMBER".                          
+         ACCEPT NN.                                           
+         PERFORM XX-PARA VARYING II FROM 1 BY 1 UNTIL II > NN 
+         MOVE FF TO PP.                                       
+         DISPLAY "THE FACTORIAL OF THE GIVEN NUMBER IS" PP.   
+         STOP RUN.                                            
+         XX-PARA.                                             
+         COMPUTE FF = FF * II.                                
+     POWER-PARA.                                              
+         DISPLAY "A TO THE POWER N".                          
+         ACCEPT AAA.                                          
+         ACCEPT NNN.                                          
+         PERFORM XXX-PARA VARYING W FROM 1 BY 1 UNTIL W > NNN 
+         DISPLAY AAA " TO THE POWER " NNN " IS"
+         DISPLAY POWER.                                       
+         STOP RUN.                                            
+         XXX-PARA.                                            
+         COMPUTE POWER = POWER * AAA.                         
+ LUCKY-PARA.                             
+     DISPLAY "ENTER ANY NUMBER".         
+     ACCEPT Q.                           
+     COMPUTE Q = FUNCTION MOD ( Q , 9 )  
+     DISPLAY Q.                          
+     STOP RUN.                                                  

@@ -1,0 +1,30 @@
+ IDENTIFICATION DIVISION.          
+ PROGRAM-ID. EXP47.                
+ DATA DIVISION.                    
+ WORKING-STORAGE SECTION.          
+     01  A PIC 9(02) VALUE 10.     
+     01  B PIC 9(02) VALUE 30.     
+                                   
+ PROCEDURE DIVISION.               
+     IF A = 10                     
+         IF B = 20                 
+             DISPLAY "A IS ",  A   
+         ELSE                      
+             NEXT SENTENCE         
+         END-IF                    
+             DISPLAY "DIVYANSHU"     
+     END-IF.                       
+         DISPLAY "SINGH"          
+                                   
+     DISPLAY "              "      
+                                   
+     IF A = 10                     
+         IF B = 20                 
+             DISPLAY "A IS ",  A   
+         ELSE                      
+             CONTINUE              
+         END-IF                    
+             DISPLAY "DIVYANSHU"     
+     END-IF.                       
+         DISPLAY "SINGH"          
+     STOP RUN.                     

@@ -1,0 +1,14 @@
+   IDENTIFICATION DIVISION.            
+   PROGRAM-ID. EXP45.                  
+   DATA DIVISION.                      
+   WORKING-STORAGE SECTION.            
+      01  STR PIC X(010) VALUE '*'.    
+      01  POS PIC 9(001) VALUE 1.      
+                                       
+   PROCEDURE DIVISION.                 
+      PERFORM PATTERN 5 TIMES.         
+      STOP RUN.                        
+      PATTERN.                         
+      DISPLAY STR.                     
+      ADD 1 TO POS.                    
+      MOVE '*' TO STR(POS:).           

@@ -1,0 +1,17 @@
+ IDENTIFICATION DIVISION.           
+ PROGRAM-ID. EXP1.                  
+ DATA DIVISION.                     
+ WORKING-STORAGE SECTION.           
+     77 A PIC 9(2) VALUE 40.        
+     77 B PIC 9(2) VALUE 10.        
+     77 C PIC 9(2).                 
+ PROCEDURE DIVISION.                
+     COMPUTE C = A + B.             
+     DISPLAY "SUM IS " C.           
+     COMPUTE C= A - B.              
+     DISPLAY "SUB IS " C.           
+     COMPUTE C = A * B.             
+     DISPLAY "MULTIPLICATION IS " C.
+     COMPUTE C = A / B.             
+     DISPLAY "DIVISION IS " C.      
+     STOP RUN.                      

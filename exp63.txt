@@ -1,0 +1,22 @@
+ IDENTIFICATION DIVISION.                        
+ PROGRAM-ID. SEARCH2.                            
+ DATA DIVISION.                                  
+ WORKING-STORAGE SECTION.                        
+ 01 WS-TABLE.                                    
+   05 WS-A PIC X(1) OCCURS 20 TIMES INDEXED BY I.
+ 01 WS-SRCH PIC A(1).                            
+ PROCEDURE DIVISION.                             
+     DISPLAY "ENTER THE STRING".                 
+     PERFORM PARA-A 20 TIMES.                    
+     DISPLAY "ENTER THE CHAR YOU WANT TO FIND".  
+     ACCEPT WS-SRCH.                             
+     SEARCH WS-A                                 
+      AT END DISPLAY 'CHARACTER NOT FOUND'       
+      WHEN WS-A(I) = WS-SRCH                     
+      DISPLAY 'CHARACTER FOUND'                  
+      END-SEARCH.                                
+      STOP RUN.                                  
+ PARA-A.                                         
+     SET I TO 1.                                 
+     ACCEPT WS-A(I).                             
+     SET I UP BY 1.                              

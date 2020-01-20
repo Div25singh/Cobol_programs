@@ -1,0 +1,12 @@
+  IDENTIFICATION DIVISION.             
+  PROGRAM-ID. EXP42.                   
+                                       
+  DATA DIVISION.                       
+  WORKING-STORAGE SECTION.             
+      01 A PIC 9.                      
+                                       
+  PROCEDURE DIVISION.                  
+      PERFORM 10 TIMES                 
+       DISPLAY "WELCOME TO MAINFRAME"  
+      END-PERFORM.                     
+       STOP RUN.                       

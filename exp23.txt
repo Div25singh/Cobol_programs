@@ -1,0 +1,23 @@
+ IDENTIFICATION DIVISION.                   
+ PROGRAM-ID.  ITACHI.                       
+ AUTHOR.  DIVYANSHU.                 
+ DATA DIVISION.                             
+ WORKING-STORAGE SECTION.                   
+ 01  VAR1           PIC 99    VALUE ZEROS.  
+ 01  VAR2           PIC A(2)  VALUE "GG".   
+ 01  VAR3           PIC X     VALUE SPACE.  
+ 01  VAR4           PIC V99   VALUE .25.    
+ PROCEDURE DIVISION.                        
+     DISPLAY VAR1.                          
+     DISPLAY VAR2.                          
+     DISPLAY VAR3.                          
+     DISPLAY VAR4.                          
+     MOVE 10 TO VAR1.                       
+     MOVE "WP" TO VAR2.                     
+     MOVE "F TO VAR3.                       
+     MOVE 0.6777 TO VAR4.                   
+     DISPLAY VAR1.                          
+     DISPLAY VAR2.                          
+     DISPLAY VAR3.                          
+     DISPLAY VAR4.                          
+ STOP RUN.                                  

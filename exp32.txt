@@ -1,0 +1,28 @@
+  IDENTIFICATION DIVISION.           
+  PROGRAM-ID. PROG2.                 
+                                     
+  DATA DIVISION.                     
+  WORKING-STORAGE SECTION.           
+       01 A PIC 9.                   
+                                     
+  PROCEDURE DIVISION.                
+       ACCEPT A.                     
+       EVALUATE A                    
+       WHEN 1                        
+       DISPLAY "MONDAY"              
+       WHEN 2                        
+       DISPLAY "TUESDAY"             
+       WHEN 3                        
+       DISPLAY "WEDNESDAY"           
+       WHEN 4                        
+       DISPLAY "THURSDAY"            
+       WHEN 5                        
+       DISPLAY "FRIDAY"              
+       WHEN 6                        
+       DISPLAY "SATURDAY"            
+       WHEN 7                        
+       DISPLAY "SUNDAY" 
+       WHEN OTHER 
+        DISPLAY "INVALID"             
+       END-EVALUATE.                 
+       STOP RUN.                     

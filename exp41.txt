@@ -1,0 +1,12 @@
+ IDENTIFICATION DIVISION.       
+ PROGRAM-ID. EXP41.             
+                                
+ PROCEDURE DIVISION.            
+     PERFORM A-PARA THRU C-PARA.
+     A-PARA.                    
+     DISPLAY "WELCOME".         
+     B-PARA.                    
+     DISPLAY "TO".              
+     C-PARA.                    
+     DISPLAY "MAINFRAME".       
+     STOP RUN.                  

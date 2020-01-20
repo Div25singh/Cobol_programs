@@ -1,0 +1,18 @@
+   IDENTIFICATION DIVISION.                  
+   PROGRAM-ID. PROG3                         
+   DATA DIVISION.                            
+   FILE SECTION.                             
+   WORKING-STORAGE SECTION.                  
+       77 NAME1 PIC X(20).                   
+       77 NAME2 PIC X(20).                   
+   PROCEDURE DIVISION.                       
+       DISPLAY "TYPE THE FIRST NAME: "       
+       ACCEPT NAME1.                         
+       DISPLAY "TYPE THE SECOND NAME: "      
+       ACCEPT NAME2.                         
+       IF NAME1 EQUALS NAME2                 
+       DISPLAY "NAMES ARE THE SAME"          
+       ELSE                                  
+       DISPLAY "NAMES ARE NOT THE SAME"      
+       END-IF.                               
+       STOP RUN.                             

@@ -1,0 +1,22 @@
+     IDENTIFICATION DIVISION.                    
+     PROGRAM-ID. EXP61.                          
+     DATA DIVISION.                              
+     WORKING-STORAGE SECTION.                    
+       01 ARR1.                                  
+           02 A OCCURS 5 TIMES.                  
+               05 SUBJECT PIC X(10).             
+               05 MARKS PIC 9(3).                
+       01 I PIC 9(1).                            
+     PROCEDURE DIVISION.                         
+       PERFORM VARYING I FROM 1 BY 1 UNTIL I>5   
+           DISPLAY "ENTER SUBJECT"               
+           ACCEPT SUBJECT (I)                    
+           DISPLAY "ENTER MARKS"                 
+           ACCEPT MARKS (I)                      
+       END-PERFORM.                              
+       PERFORM VARYING I FROM 1 BY 1 UNTIL I>5   
+           DISPLAY SUBJECT (I)                   
+           DISPLAY " "                           
+           DISPLAY MARKS (I)                     
+       END-PERFORM.                              
+       STOP RUN.                                 

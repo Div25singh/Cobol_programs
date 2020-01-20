@@ -1,0 +1,19 @@
+  IDENTIFICATION DIVISION.           
+  PROGRAM-ID. EXP43.                 
+                                     
+  DATA DIVISION.                     
+  WORKING-STORAGE SECTION.           
+      01 A PIC 9 VALUE 1.            
+      01 B PIC 9 VALUE 1.            
+                                     
+  PROCEDURE DIVISION.                
+      PERFORM PARA-A 2 TIMES.        
+      STOP RUN.                      
+                                     
+      PARA-A.                        
+       PERFORM PARA-B 2 TIMES.       
+       ADD 1 TO A.                   
+       MOVE 1 TO B.                  
+      PARA-B.                        
+       DISPLAY "X="A "Y="B.          
+       ADD 1 TO B.                   

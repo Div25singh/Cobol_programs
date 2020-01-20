@@ -1,0 +1,7 @@
+ //TSO007D JOB NOTIFY=&SYSUID                   
+ //JOBLIB DD DSN=TSO007.COBOL.DIV1,DISP=SHR    
+ //STEP1 EXEC PGM=FILE1                         
+ //DD1 DD DSN=TSO007.COBOL.DIV,DISP=OLD  
+ //SYSPRINT DD SYSOUT=*                         
+ //SYSIN DD DUMMY                               
+ //                                             

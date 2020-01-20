@@ -1,0 +1,23 @@
+IDENTIFICATION DIVISION.                                
+PROGRAM-ID. STUMARK1.                                   
+DATA DIVISION.                                          
+ WORKING-STORAGE SECTION.                               
+ 01 WS-TABLE.                                           
+   05 WS-A OCCURS 5 TIMES INDEXED BY I.                 
+     10 WS-B PIC A(5).                                  
+     10 WS-C OCCURS 5 TIMES INDEXED BY J.               
+       15 WS-D PIC 9(2).                                
+PROCEDURE DIVISION.                                     
+    DISPLAY "ENTER THE STUDENT NAME WITH MARKS"         
+    ACCEPT WS-A(1).                                     
+    ACCEPT WS-A(2).                                     
+    ACCEPT WS-A(3).                                     
+    ACCEPT WS-A(4).                                     
+    ACCEPT WS-A(5).                                     
+    DISPLAY "STUDENTS WITH THERE MARKS ARE AS FOLLOWS". 
+    PERFORM PARA-A 5 TIMES.                             
+    STOP RUN.                                           
+PARA-A.                                                 
+    DISPLAY WS-A(I).                                    
+    SET I UP BY 1.                                      
+    SET J UP BY 1.                                      

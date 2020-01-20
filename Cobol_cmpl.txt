@@ -1,0 +1,5 @@
+//TSO007DS JOB NOTIFY=&SYSUID                            
+//STEP1 EXEC PROC=IGYWCL,LNGPRFX=IGY,MEM=MEM1         
+//COBOL.SYSIN DD DSN=TSO007.COBOL.DIV1(&MEM),DISP=SHR
+//LKED.SYSLMOD DD DSN=TSO007.COBOL.DIV2(&MEM),DISP=SHR
+//                                                     
